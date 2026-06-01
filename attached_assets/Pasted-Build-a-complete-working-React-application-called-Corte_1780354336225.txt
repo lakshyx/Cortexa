@@ -1,0 +1,155 @@
+Build a complete working React application called "Cortexa - Career Guide for J&K Students" with the following pages and features. Use React Router, Tailwind CSS, and lucide-react icons. Dark theme throughout.
+
+CORE FLOW:
+Student lands on home → Clicks "Find Your Path" → Fills form (marks, stream, hobbies) → Takes aptitude quiz → Gets college + career recommendations
+
+PAGES:
+
+1. HOME PAGE (/)
+- Navbar: Logo CORTEXA, links to all pages
+- Hero: "Confused After 12th? Let Cortexa Guide You!" with "Find Your Path Now" button that goes to /assessment
+- Features section: 6 cards (College Finder, Career Guide, Aptitude Quiz, Entrance Exams, Scholarships, Roadmap)
+- How it works: 4 steps
+- Footer with team info: Aditya Sahu, Haardik Ukey, Devyansh Singh Baghel, Ishank Kori, Lakshya Chakravarti. Guide: Prof. Preeti Rai. College: Gyan Ganga Institute of Technology & Sciences Jabalpur
+
+2. ASSESSMENT PAGE (/assessment)
+Multi-step form with progress bar:
+
+STEP 1 - Basic Info:
+- Student Name (text input)
+- Stream selector: PCM / PCB / Commerce / Arts
+- 12th Percentage (number input 0-100)
+- State: dropdown with all Indian states (default: Jammu & Kashmir)
+- District: text input
+
+STEP 2 - Interests & Hobbies:
+- Multi-select interest cards (click to select/deselect):
+  Technology, Medicine, Law, Business, Arts & Design, Music, Sports, Teaching, Government Service, Research, Writing, Environment, Social Work, Defence/Army, Architecture, Finance
+- At least 1 must be selected
+
+STEP 3 - Skills & Personality:
+- Multi-select skill cards:
+  Problem Solving, Communication, Creativity, Leadership, Technical Skills, Helping Others, Working with Numbers, Drawing/Design, Writing, Public Speaking, Physical Fitness, Research
+- Personality type selector: Introvert / Extrovert / Ambivert
+
+STEP 4 - Aptitude Quiz (10 questions):
+- Show 1 question at a time
+- 4 options each
+- Progress bar
+- No timer needed
+- Questions covering: logical reasoning, numerical ability, verbal ability
+- Store answers and calculate score
+
+After all steps → redirect to /results
+
+3. RESULTS PAGE (/results)
+Show personalized results based on student input:
+
+SECTION A - Recommended Careers (top 5):
+Logic: Match interests + skills + stream to career suggestions
+- PCM + Technology interest → Software Engineer, Data Scientist, Mechanical Engineer
+- PCM + Defence → NDA, Indian Army, Air Force
+- PCB + Medicine → Doctor (MBBS), Nursing, Pharmacy, Biotechnology
+- PCB + Research → Biotechnology, Environmental Science
+- Commerce + Finance → CA, MBA Finance, Banking
+- Commerce + Business → Entrepreneur, BBA, Marketing
+- Arts + Creative → Graphic Designer, UI/UX, Film Making
+- Arts + Government → UPSC/JKPSC, Teaching, Law
+Show each career as a card with: title, description, expected salary range, required entrance exam
+
+SECTION B - Recommended Colleges (top 6):
+Logic: Filter by stream, percentage, and preference (J&K first or All India)
+
+J&K Colleges data (hardcode these):
+- NIT Srinagar — Engineering — Cutoff: 75%+ — Location: Srinagar J&K
+- University of Kashmir — Multiple streams — Cutoff: 60%+ — Location: Srinagar
+- SKUAST Kashmir — Agriculture/Science — Cutoff: 65%+ — Location: Srinagar
+- Jammu University — Multiple streams — Cutoff: 60%+ — Location: Jammu
+- NIT Jalandhar — Engineering — Cutoff: 80%+ — Location: Punjab (near J&K)
+- Government Medical College Srinagar — MBBS — Cutoff: 85%+ — Location: Srinagar
+- Government Medical College Jammu — MBBS — Cutoff: 85%+ — Location: Jammu
+- SMVDU (Shri Mata Vaishno Devi University) — Engineering/Science — Cutoff: 70%+ — Location: Katra J&K
+- Cluster University Srinagar — Arts/Commerce/Science — Cutoff: 55%+ — Location: Srinagar
+- Cluster University Jammu — Arts/Commerce/Science — Cutoff: 55%+ — Location: Jammu
+
+All India Colleges (hardcode):
+- IIT Bombay — Engineering — Cutoff: 95%+ JEE Advanced
+- IIT Delhi — Engineering — Cutoff: 95%+ JEE Advanced
+- AIIMS Delhi — Medical — Cutoff: 95%+ NEET
+- Delhi University — Multiple — Cutoff: 85%+
+- VIT Vellore — Engineering — Cutoff: 75%+
+- Manipal University — Engineering/Medical — Cutoff: 70%+
+- Symbiosis Pune — Commerce/Law — Cutoff: 75%+
+- Christ University Bangalore — Multiple — Cutoff: 70%+
+
+Show colleges as cards with: name, location, stream, cutoff, type (Government/Private)
+
+SECTION C - Entrance Exams to Prepare:
+Based on stream and career show relevant exams:
+- Engineering: JEE Main, JEE Advanced, CUET
+- Medical: NEET UG
+- Law: CLAT, AILET
+- Defence: NDA, CDS
+- Commerce: CUET, IPM IIM
+- General: CUET
+Show each exam card with: name, full form, conducting body, exam date (approximate), preparation tips
+
+SECTION D - Scholarships for J&K Students:
+Hardcode these real scholarships:
+1. Prime Minister's Special Scholarship Scheme (PMSSS) — For J&K students — Up to 1.25 lakh per year — All streams
+2. J&K State Scholarship — State government — Merit based — For domicile students
+3. National Merit Scholarship — Central government — Based on 12th marks — All streams
+4. Post Matric Scholarship SC/ST — Central government — For SC/ST students
+5. Ishan Uday — NE and J&K students — UGC scheme — For college students
+6. Inspire Scholarship — DST India — For Science students — 80000 per year
+Show as cards with: name, amount, eligibility, how to apply
+
+SECTION E - Your Aptitude Score
+Show quiz result with score, strengths identified, recommended study areas
+
+SECTION F - Action Plan / Roadmap
+Step by step what to do now:
+1. Appear for relevant entrance exam (based on their stream)
+2. Apply for PMSSS scholarship before deadline
+3. Fill college applications
+4. Prepare documents (domicile certificate etc for J&K students)
+
+4. COLLEGES PAGE (/colleges)
+- Search bar: search by college name
+- Filter by: Stream (All/Engineering/Medical/Commerce/Arts), Location (J&K Only / All India), Type (Government/Private), Cutoff range slider
+- Show all colleges as cards
+- Each card: College name, location, streams offered, cutoff %, type, "View Details" button
+- On View Details: show full info in a modal or expanded card
+
+5. CAREERS PAGE (/careers)
+- All career options listed as cards
+- Filter by: Stream, Interest area, Salary range
+- Each career card: Title, description, required skills, salary range, growth prospects, required degree, entrance exam
+- Minimum 20 careers hardcoded
+
+6. SCHOLARSHIPS PAGE (/scholarships)
+- All scholarships listed
+- Filter by: Category (Merit/Need/Category-based), Stream, Amount
+- Each card: Name, amount, eligibility, last date, how to apply link placeholder
+- Minimum 8 scholarships hardcoded
+
+7. ABOUT PAGE (/about)
+- Project info: SIH25093 - One Stop Personalized Career and Education Advisor
+- Team members with roles
+- Guide name
+- College name
+- Problem statement explanation
+
+TECHNICAL REQUIREMENTS:
+- React Router DOM for all navigation
+- All results calculated using JavaScript logic (no API needed)
+- localStorage to save student assessment data
+- Fully responsive design
+- Mobile hamburger menu
+- Smooth transitions
+- All pages pre-filled with data so nothing looks empty
+- Dark theme: bg-gray-950, bg-gray-900, blue-500 accents
+- Professional clean design
+- All buttons and links working
+
+Make it a complete, polished, working application.
