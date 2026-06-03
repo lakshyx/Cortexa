@@ -1,15 +1,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
-import { Code, Layout, Database, BookOpen, Compass } from "lucide-react";
+import { Code, Database, FileText, Shield, Star } from "lucide-react";
 
 export default function About() {
   const team = [
-    { name: "Aditya Sahu", role: "Team Lead & Full Stack Developer", icon: Code, initials: "AS" },
-    { name: "Haardik Ukey", role: "Frontend Developer", icon: Layout, initials: "HU" },
-    { name: "Devyansh Singh Baghel", role: "UI/UX Designer", icon: Compass, initials: "DB" },
-    { name: "Ishank Kori", role: "Backend Developer", icon: Database, initials: "IK" },
-    { name: "Lakshya Chakravarti", role: "Research & Content", icon: BookOpen, initials: "LC" },
+    { name: "Lakshya Chakravarti", role: "Project Lead", icon: Star, initials: "LC" },
+    { name: "Aditya Sahu", role: "Requirement Gathering & Documentation Specialist", icon: FileText, initials: "AS" },
+    { name: "Ishank Kori", role: "Requirement Gathering, Documentation & Quality Assurance", icon: Shield, initials: "IK" },
+    { name: "Haardik Ukey", role: "Frontend & Backend Development", icon: Code, initials: "HU" },
+    { name: "Devyansh Singh Baghel", role: "Frontend & Backend Development", icon: Code, initials: "DB" },
+    { name: "Ashi Singh", role: "Database Administrator", icon: Database, initials: "Ai" },
   ];
 
   return (
@@ -20,9 +21,6 @@ export default function About() {
         transition={{ duration: 0.5 }}
       >
         <div className="text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 mb-4">
-            Project: SIH25093
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">About Cortexa</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             One Stop Personalized Career and Education Advisor for J&K Students.
@@ -58,7 +56,7 @@ export default function About() {
                   <CardContent className="flex flex-col items-center justify-center p-4">
                     <Avatar className="h-20 w-20 mb-4 border-2 border-primary/20 group-hover:border-primary transition-colors">
                       <AvatarFallback className="bg-secondary text-primary text-xl font-bold">
-                        {member.initialals}
+                        {member.initials}
                       </AvatarFallback>
                     </Avatar>
                     <h3 className="font-bold text-lg mb-1">{member.name}</h3>

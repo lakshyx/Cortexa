@@ -91,25 +91,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <span className="font-bold text-xl">CORTEXA</span>
             </div>
             <p className="text-muted-foreground text-sm max-w-sm">
-              One Stop Personalized Career and Education Advisor for J&K students. Project SIH25093.
+              One Stop Personalized Career and Education Advisor for J&K students.
             </p>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Team</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>Aditya Sahu (Lead & Full Stack)</li>
-              <li>Haardik Ukey (Frontend)</li>
-              <li>Devyansh Singh Baghel (UI/UX)</li>
-              <li>Ishank Kori (Backend)</li>
-              <li>Lakshya Chakravarti (Research)</li>
+              <li>Lakshya Chakravarti (Project Lead)</li>
+              <li>Aditya Sahu (Documentation)</li>
+              <li>Ishank Kori (QA & Documentation)</li>
+              <li>Haardik Ukey (Development)</li>
+              <li>Devyansh Singh Baghel (Development)</li>
+              <li>Ashi Singh (Database)</li>
             </ul>
           </div>
           
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Institution</h3>
             <p className="text-sm text-muted-foreground mb-2">
-              Gyan Ganga Institute of Technology & Sciences Jabalpur
+              Gyan Ganga Institute of Technology & Sciences, Jabalpur
             </p>
             <p className="text-sm text-muted-foreground">
               Guide: Prof. Preeti Rai
