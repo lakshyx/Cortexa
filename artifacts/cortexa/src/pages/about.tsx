@@ -8,8 +8,8 @@ export default function About() {
     { name: "Lakshya Chakravarti", role: "Project Lead", icon: Star, initials: "LC" },
     { name: "Aditya Sahu", role: "Requirement Gathering & Documentation Specialist", icon: FileText, initials: "AS" },
     { name: "Ishank Kori", role: "Requirement Gathering, Documentation & Quality Assurance", icon: Shield, initials: "IK" },
-    { name: "Haardik Ukey", role: "Frontend & Backend Development", icon: Code, initials: "HU" },
-    { name: "Devyansh Singh Baghel", role: "Frontend & Backend Development", icon: Code, initials: "DB" },
+    { name: "Haardik Ukey", role: "Frontend Development", icon: Code, initials: "HU" },
+    { name: "Devyansh Singh Baghel", role: "Backend Development", icon: Code, initials: "DB" },
     { name: "Ashi Singh", role: "Database Administrator", icon: Database, initials: "Ai" },
   ];
 

@@ -101,8 +101,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
               <li>Lakshya Chakravarti (Project Lead)</li>
               <li>Aditya Sahu (Documentation)</li>
               <li>Ishank Kori (QA & Documentation)</li>
-              <li>Haardik Ukey (Development)</li>
-              <li>Devyansh Singh Baghel (Development)</li>
+              <li>Haardik Ukey (Frontend)</li>
+              <li>Devyansh Singh Baghel (Backend)</li>
               <li>Ashi Singh (Database)</li>
             </ul>
           </div>
